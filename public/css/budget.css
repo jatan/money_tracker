@@ -1,0 +1,119 @@
+.wrapper{
+    margin-top: 80px;
+    background-color: transparent;
+/*    border:1px solid red;     */
+    padding-bottom: 20px;
+}
+
+.months{
+    /* background-color: #8bc34a; */
+    width: 80%;
+    margin: auto;
+    height: 50px;
+}
+
+.row{
+    margin: 0px;
+}
+.custom {
+    color: #ffffff;
+    padding: 0;
+    /*background-color: #4aa6c3;*/
+    line-height: 50px;
+    text-align: center;
+    border-color: rgba(0, 0, 0, .25);
+    border-style: solid;
+    border-width: 0.5px;
+    border-radius: 3px 3px 0 0;
+}
+.custom a{
+    color: #fff;;
+}
+
+.bg-green{
+    background-color: green;
+}
+.bg-lightgreen{
+    background-color: lightgreen;
+}
+
+.progress-container{
+    width: 80%;
+    margin: auto;
+}
+
+.panel{
+    width: 80%;
+    margin:auto;
+}
+
+.test{
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+}
+
+.card{
+    background-color: rgba(210, 222, 228, 0.44) !important;
+    position: relative;
+    margin: 20px 0 10px 0;
+    background-color: #fff;
+    transition: box-shadow .25s;
+    border-radius: 2px;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
+}
+
+.card .card-content {
+    padding: 10px 15px;
+    border-radius: 0 0 2px 2px;
+}
+
+.card .card-content .card-title {
+    line-height: 48px;
+    font-size: 24px;
+    font-weight: 300;
+}
+
+.card .card-action {
+    position: relative;
+    background-color: inherit;
+    border-top: 1px solid rgba(160,160,160,0.2);
+    padding: 10px 20px;
+    z-index: 2;
+}
+
+.card-action a{
+    color: black !important;
+    margin-right: 20px;
+    transition: color .3s ease;
+    text-transform: uppercase;
+}
+
+.right{
+    float: right !important;
+}
+.animated-bar div {
+    line-height: 20px;
+    width:0%;
+    border-radius: 5px;
+    animation:loadbar 2s;
+    -webkit-animation:loadbar 2s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+    /*loadbar is just a name of the animation and 2s is duration of animation*/
+@-webkit-keyframes loadbar {        /* So when this is applied, width will go from 0 to 75 in 2s */
+    0%      { width: 0%; }
+    100%    { width: 75%; }
+}
+@keyframes loadbar {                /* So when this is applied, width will go from 0 to 75 in 2s */
+    0%      { width: 0%; }
+    100%    { width: 75%; }
+    }
+
+.reset-fontsize{
+    font-size:14px;
+}
+
+
+th, td {
+    text-align: center;
+}

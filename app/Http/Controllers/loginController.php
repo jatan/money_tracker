@@ -1,0 +1,47 @@
+<?php
+
+namespace App\Http\Controllers;
+
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use App\Http\Requests;
+use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Input;
+use Illuminate\Support\Facades\Redirect;
+
+class loginController extends Controller{
+
+   public function login(){
+       return view('common.login');
+   }
+
+    /**
+     * @param loginUserRequest $request
+     * @return string
+     * @internal param $ Requests\loginUserRequest $
+     */
+    public function loginProcess(Request $request){
+        $credentials = [
+            'email' => Input::get('email'),
+            'password' => Input::get('password'),
+            'confirmed' => 1
+        ];
+
+        if ( ! Auth::attempt($credentials)) {
+            return Redirect::back()
+                ->withInput()
+                ->withErrors([
+                    'credentials' => 'We were unable to sign you in.'
+                ]);
+        }
+        return Redirect()->intended('user/dashboard');
+    }
+
+    /**
+     *
+     */
+    public function logout(){
+        auth::logout();
+        return(Redirect()->intended('login'));
+    }
+}
